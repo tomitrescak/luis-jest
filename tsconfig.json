@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "jsx": "react",
+      "lib": ["dom", "es2015", "es2016"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmitHelpers": true,
+      "outDir": "./dist",
+      "preserveConstEnums": true,
+      "pretty": true,
+      "removeComments": true,
+      "skipDefaultLibCheck": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strictNullChecks": false,
+      "target": "es5",
+      "declaration": true
+  },
+  "exclude": [
+      "node_modules"
+  ]
+}

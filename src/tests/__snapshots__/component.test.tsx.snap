@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Folder Other Component renders correctly 1`] = `
+<div>
+  Other Component 7
+</div>
+`;
+
+exports[`Folder Other Component renders other 1`] = `
+<div>
+  Other Component 7
+</div>
+`;

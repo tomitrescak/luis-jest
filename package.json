@@ -1,0 +1,33 @@
+{
+  "name": "luis-catalogue",
+  "version": "1.0.0",
+  "description": "Example catalogue for Lui",
+  "main": "dest/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "CI=true jest --watch",
+    "watchInteractive": "jest --watch",
+    "luis": "node fuse"
+  },
+  "keywords": [
+    "TDD"
+  ],
+  "author": "Tomas Trescak <tomi.trescak@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-cli": "^22.1.4",
+    "luis": "^2.3.14",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.0",
+    "@types/react": "^16.0.35",
+    "connect-history-api-fallback": "^1.5.0",
+    "fuse-box": "^3.0.2",
+    "ts-jest": "^22.0.1",
+    "typescript": "^2.6.2"
+  }
+}
