@@ -27,6 +27,7 @@
     "@types/react": "^16.0.35",
     "connect-history-api-fallback": "^1.5.0",
     "fuse-box": "^3.0.2",
+    "proxyrequire": "^1.0.19",
     "ts-jest": "^22.0.1",
     "typescript": "^2.6.2"
   }

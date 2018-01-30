@@ -1,13 +1,13 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 4,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
-  "numTotalTestSuites": 1,
-  "numTotalTests": 4,
+  "numTotalTestSuites": 0,
+  "numTotalTests": 0,
   "snapshot": {
     "added": 0,
     "didUpdate": false,
@@ -16,89 +16,14 @@
     "filesRemoved": 0,
     "filesUnmatched": 0,
     "filesUpdated": 0,
-    "matched": 2,
-    "total": 2,
+    "matched": 0,
+    "total": 0,
     "unchecked": 0,
     "uncheckedKeys": [],
     "unmatched": 0,
     "updated": 0
   },
   "success": true,
-  "testResults": [
-    {
-      "console": null,
-      "failureMessage": null,
-      "numFailingTests": 0,
-      "numPassingTests": 4,
-      "numPendingTests": 0,
-      "snapshot": {
-        "added": 0,
-        "fileDeleted": false,
-        "matched": 2,
-        "unchecked": 0,
-        "unmatched": 0,
-        "updated": 0,
-        "uncheckedKeys": []
-      },
-      "testFilePath": "/Users/tomi/Github/packages/luis-jest/src/tests/component.test.tsx",
-      "testResults": [
-        {
-          "ancestorTitles": [
-            "Folder",
-            "Component With Test"
-          ],
-          "duration": 1,
-          "failureMessages": [],
-          "fullName": "Folder Component With Test passes",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "passes"
-        },
-        {
-          "ancestorTitles": [
-            "Folder",
-            "Component With Test"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Folder Component With Test fails",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "fails"
-        },
-        {
-          "ancestorTitles": [
-            "Folder",
-            "Other Component"
-          ],
-          "duration": 2,
-          "failureMessages": [],
-          "fullName": "Folder Other Component renders correctly",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "renders correctly"
-        },
-        {
-          "ancestorTitles": [
-            "Folder",
-            "Other Component"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Folder Other Component renders other",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "renders other"
-        }
-      ],
-      "sourceMaps": {},
-      "skipped": false,
-      "leaks": false
-    }
-  ],
+  "testResults": [],
   "wasInterrupted": false
 }

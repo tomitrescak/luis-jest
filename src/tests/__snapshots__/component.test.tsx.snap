@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Folder Other Component renders correctly 1`] = `
-<div>
-  Other Component 7
-</div>
-`;
+exports[`Folder Other Component renders correctly 1`] = `"<div><h1>Component</h1><div>Bar<div><div>[Mocked]</div></div></div></div>"`;
 
 exports[`Folder Other Component renders other 1`] = `
 <div>

@@ -1,5 +1,6 @@
 const { FuseBox,  CSSPlugin, CSSResourcePlugin,  WebIndexPlugin, JSONPlugin } = require('fuse-box');
 const { SnapshotPlugin } = require('./node_modules/luis/dist/bridges/jest/snapshot_plugin');
+const StubPlugin = require('proxyrequire').FuseBoxStubPlugin(/\.tsx?/);
 
 // setup server
 
@@ -31,7 +32,13 @@ const luisFuse = FuseBox.init({
       })
     ],
     WebIndexPlugin({ template: 'src/index.html', target: 'luis.html' })
-  ]
+  ],
+  // this is needed for enzyme execution in browser
+  shim: {
+    stream: {
+      exports: '{ Writable: function() {}, Readable: function() {}, Transform: function() {} }'
+    }
+  }
 });
 
 // init dev server (CLIENT ONLY)
@@ -61,9 +68,13 @@ luisFuse
   .bundle('luis-client')
   .watch() // watch only client related code
   .hmr()
+  .plugin([StubPlugin])
   .target('browser@es6')
   .sourceMaps(true)
-  .instructions(' !> [index.tsx]')
+  .instructions(' !> [index.tsx] +proxyrequire')
+  .globals({
+    proxyrequire: '*'
+  })
   .completed(proc => { 
     if (!running) { 
       running = true;

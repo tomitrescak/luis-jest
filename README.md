@@ -131,7 +131,7 @@ luisFuse
 luisFuse.run();
 ```
 
-# Snapshots
+# Snapshots and Server Mode
 
 If you want to be able to update snapshot from Luis UI, you need to run Luis in server mode. To do so, you need to configure Luis server file and change the `fuse.js` to support the server execution.
 
@@ -173,4 +173,30 @@ luisFuse
     serverFuse.run(); 
   } 
 });
-```                                 
+```   
+
+# Mocking
+
+Luis uses the `proxyrequire` package to support basic mocking with jest. At this moment only manual, module mocks are supported (e.g. jest.mock('path', mock)).
+
+To enable mocking install the proxyrequire plugin:
+
+
+```ts
+yarn add proxyrequire
+```
+
+And modify the fuse config to use it as a plugin and a package:
+
+```js
+const StubPlugin = require('proxyrequire').FuseBoxStubPlugin(/\.tsx?/); // or jsx?
+
+luisFuse
+  .bundle('luis-client')
+  .plugin([StubPlugin]) // add the plugin
+  .instructions(' !> [index.tsx] +proxyrequire') // force inclusion of proxyrequire
+  .globals({
+    proxyrequire: '*' // make available in global space. This is needed as all 'require' statements are replaced by 'proxyrequire'
+  })
+  ...
+```

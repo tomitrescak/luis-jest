@@ -1,5 +1,12 @@
 import * as React from 'react';
 
+jest.mock('../components/foo', () => ({
+  Foo: () => <div>[Mocked]</div>
+}));
+
+import { Bar } from '../components/bar';
+import { mount } from 'enzyme';
+
 storyOf('Input', () => <div>My Component</div>);
 
 // you can group tests using BDD approach, with each describe generating one folder in
@@ -30,13 +37,16 @@ describe('Folder', function() {
     {
       get component() {
         return (
-          <div>Other Component 7</div>
+          <div>
+            <h1>Component</h1>
+            <Bar />
+          </div>
         );
       }
     },
     data => {
       it('renders correctly', function() {
-        expect(data.component).toMatchSnapshot();
+        expect(mount(data.component).html()).toMatchSnapshot();
       });
 
       it('renders other', function() {
